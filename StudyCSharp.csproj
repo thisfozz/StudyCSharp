@@ -43,15 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classwork\Exception\Custom42Exception.cs" />
+    <Compile Include="Classwork\Exception\CustomInvalidException.cs" />
+    <Compile Include="Classwork\Exception\CustomOutOfRange.cs" />
+    <Compile Include="Classwork\Human\Employee.cs" />
+    <Compile Include="Classwork\Figurs\Figure.cs" />
+    <Compile Include="Classwork\Human\Human.cs" />
+    <Compile Include="Classwork\Figurs\Square.cs" />
+    <Compile Include="Classwork\Human\Student.cs" />
+    <Compile Include="Classwork\Figurs\Triangle.cs" />
+    <Compile Include="Classwork\Word\WordCount.cs" />
+    <Compile Include="Homework\Hmw10Apr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classwork\" />
-    <Folder Include="Homework\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -93,9 +93,6 @@ namespace StudyCSharp.Homework
             Console.ReadLine();
         }
     }
-}
-
-
     class Passport
     {
         private string number;
@@ -103,7 +100,7 @@ namespace StudyCSharp.Homework
         private string surname;
         private DateTime issueDate;
 
-        public Passport(string number, string name,string surname, DateTime issueDate)
+        public Passport(string number, string name, string surname, DateTime issueDate)
         {
             if (string.IsNullOrWhiteSpace(number))
             {

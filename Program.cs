@@ -10,7 +10,7 @@ namespace StudyCSharp
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }

@@ -20,6 +20,7 @@ namespace StudyCSharp.Homework.Book
             if(!books.Contains(book))
             {
                 books.Add(book);
+                Console.Write("Книга добавлена.");
             }
             else
             {
@@ -28,14 +29,20 @@ namespace StudyCSharp.Homework.Book
         }
         public void RemoveBook(Book book)
         {
-            books.Remove(book);
+            if (books.Contains(book))
+            {
+                books.Remove(book);
+                Console.Write("Книга удалена.");
+            }
+            else
+            {
+                Console.Write("Такой книги нет в списке");
+            }
         }
         
         public bool ContainsBook(Book book)
         {
             return books.Contains(book);
         }
-        
-        // Какие операторы тут можно перегрузить?
     }
 }

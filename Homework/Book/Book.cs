@@ -22,5 +22,14 @@ namespace StudyCSharp.Homework.Book
         {
             return $"{Title} ({Author}, {Year})";
         }
+
+        public static bool operator !=(Book a, Book b)
+        {
+            return a != b;
+        }
+        public static bool operator ==(Book a, Book b)
+        {
+            return a == b;
+        }
     }
 }

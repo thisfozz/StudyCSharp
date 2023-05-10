@@ -141,7 +141,10 @@ namespace StudyCSharp.Homework
             Console.WriteLine($"E-mail: {email}");
         }
 
-
+        public override int GetHashCode()
+        {
+            return (numberOfStaff).GetHashCode();
+        }
 
         // Увеличение количества сотрудников
         public static Journal operator +(Journal journal, UInt64 value = 0)

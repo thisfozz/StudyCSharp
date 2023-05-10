@@ -23,13 +23,23 @@ namespace StudyCSharp.Homework.Book
             return $"{Title} ({Author}, {Year})";
         }
 
-        public static bool operator !=(Book a, Book b)
+        public static bool operator !=(Book sourseBook, Book bookOther)
         {
-            return a != b;
+            return sourseBook != bookOther;
         }
-        public static bool operator ==(Book a, Book b)
+        public static bool operator ==(Book sourseBook, Book bookOther)
         {
-            return a == b;
+            return sourseBook == bookOther;
+        }
+
+        // If it is necessary to sort the books by the release date, the corresponding implementation has been made.
+        public static bool operator >(Book sorseBook, Book bookOther)
+        {
+            return sorseBook.Year > bookOther.Year;
+        }
+        public static bool operator <(Book sorseBook, Book bookOther)
+        {
+            return sorseBook.Year < bookOther.Year;
         }
     }
 }

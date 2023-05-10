@@ -54,7 +54,9 @@
     <Compile Include="Classwork\Figurs\Triangle.cs" />
     <Compile Include="Classwork\Word\WordCount.cs" />
     <Compile Include="Homework\Hmw10Apr.cs" />
+    <Compile Include="Homework\Hmw17Aprl.cs" />
     <Compile Include="Homework\Hmw26Aprl.cs" />
+    <Compile Include="Homework\Journal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

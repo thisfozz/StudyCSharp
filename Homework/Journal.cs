@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace StudyCSharp.Homework
 {
@@ -13,8 +15,9 @@ namespace StudyCSharp.Homework
         private string description;
         private string phone;
         private string email;
+        private UInt64 numberOfStaff;
 
-        public Journal(string name, DateTime year, string description, string phone, string email)
+        public Journal(string name, DateTime year, string description, string phone, string email, UInt64 numberOfStaff = 0)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -42,6 +45,7 @@ namespace StudyCSharp.Homework
             this.description = description;
             this.phone = phone;
             this.email = email;
+            this.numberOfStaff = numberOfStaff;
         }
 
         public void SetName(string name)
@@ -135,6 +139,48 @@ namespace StudyCSharp.Homework
             Console.WriteLine($"Описание журнала: {description}");
             Console.WriteLine($"Номер телефона: {phone}");
             Console.WriteLine($"E-mail: {email}");
+        }
+
+        // Увеличение количества сотрудников
+        public static Journal operator +(Journal journal, UInt64 value = 0)
+        {
+            UInt64 result = journal.numberOfStaff + value;
+            return new Journal(journal.name, journal.year,journal.description, journal.phone, journal.email, result);
+        }
+
+        // Уменьшение количества сотрудников
+        public static Journal operator -(Journal journal, UInt64 value = 0)
+        {
+            UInt64 result = 0;
+            if (journal.numberOfStaff - value > 0) {
+                result = journal.numberOfStaff - value;
+            }
+            else
+            {
+                throw new ArgumentException("Число не может превышать количество сотрудников");
+            }
+            return new Journal(journal.name, journal.year, journal.description, journal.phone, journal.email, result);
+        }
+
+        // Проверка на неравенство количества сотрудников
+        public static bool operator !=(Journal journalSourse, Journal journalOther)
+        {
+            return journalSourse.numberOfStaff != journalOther.numberOfStaff;
+        }
+
+        //Проверка на равенство количества сотрудников
+        public static bool operator ==(Journal journalSourse, Journal journalOther)
+        {
+            return journalSourse.numberOfStaff == journalOther.numberOfStaff;
+        }
+
+        public static bool operator <(Journal journalSourse, Journal journalOther)
+        {
+            return journalSourse.numberOfStaff < journalOther.numberOfStaff;
+        }
+        public static bool operator >(Journal journalSourse, Journal journalOther) 
+        {
+            return journalSourse.numberOfStaff > journalOther.numberOfStaff;
         }
     }
 }

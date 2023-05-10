@@ -23,6 +23,11 @@ namespace StudyCSharp.Homework.Book
             return $"{Title} ({Author}, {Year})";
         }
 
+        public override int GetHashCode()
+        {
+            return (Title + Author + Year).GetHashCode();
+        }
+
         public static bool operator !=(Book sourseBook, Book bookOther)
         {
             return sourseBook != bookOther;

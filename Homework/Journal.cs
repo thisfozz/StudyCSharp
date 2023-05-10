@@ -141,6 +141,8 @@ namespace StudyCSharp.Homework
             Console.WriteLine($"E-mail: {email}");
         }
 
+
+
         // Увеличение количества сотрудников
         public static Journal operator +(Journal journal, UInt64 value = 0)
         {

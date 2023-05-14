@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyCSharp.Homework
 {
-    internal class Hmw17Aprl
+    internal class C_HW_modul_03_part_01
     {
         public static void PrintSquare(int length, char symbol)
         {

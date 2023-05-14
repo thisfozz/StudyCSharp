@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudyCSharp
 {
-    internal class Hmw10AprT1
+    internal class C_HW_modul_01
     {
         public void Task1()
         {

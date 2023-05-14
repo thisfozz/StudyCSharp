@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace StudyCSharp.Homework
 {
-    internal class Journal
+    internal class C_HW_modul_03_part_01Journal
     {
         private string name;
         private DateTime year;
@@ -17,7 +17,7 @@ namespace StudyCSharp.Homework
         private string email;
         private UInt64 numberOfStaff;
 
-        public Journal(string name, DateTime year, string description, string phone, string email, UInt64 numberOfStaff = 0)
+        public C_HW_modul_03_part_01Journal(string name, DateTime year, string description, string phone, string email, UInt64 numberOfStaff = 0)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -147,14 +147,14 @@ namespace StudyCSharp.Homework
         }
 
         // Увеличение количества сотрудников
-        public static Journal operator +(Journal journal, UInt64 value = 0)
+        public static C_HW_modul_03_part_01Journal operator +(C_HW_modul_03_part_01Journal journal, UInt64 value = 0)
         {
             UInt64 result = journal.numberOfStaff + value;
-            return new Journal(journal.name, journal.year,journal.description, journal.phone, journal.email, result);
+            return new C_HW_modul_03_part_01Journal(journal.name, journal.year,journal.description, journal.phone, journal.email, result);
         }
 
         // Уменьшение количества сотрудников
-        public static Journal operator -(Journal journal, UInt64 value = 0)
+        public static C_HW_modul_03_part_01Journal operator -(C_HW_modul_03_part_01Journal journal, UInt64 value = 0)
         {
             UInt64 result = 0;
             if (journal.numberOfStaff - value > 0) {
@@ -164,26 +164,26 @@ namespace StudyCSharp.Homework
             {
                 throw new ArgumentException("Число не может превышать количество сотрудников");
             }
-            return new Journal(journal.name, journal.year, journal.description, journal.phone, journal.email, result);
+            return new C_HW_modul_03_part_01Journal(journal.name, journal.year, journal.description, journal.phone, journal.email, result);
         }
 
         // Проверка на неравенство количества сотрудников
-        public static bool operator !=(Journal journalSourse, Journal journalOther)
+        public static bool operator !=(C_HW_modul_03_part_01Journal journalSourse, C_HW_modul_03_part_01Journal journalOther)
         {
             return journalSourse.numberOfStaff != journalOther.numberOfStaff;
         }
 
         //Проверка на равенство количества сотрудников
-        public static bool operator ==(Journal journalSourse, Journal journalOther)
+        public static bool operator ==(C_HW_modul_03_part_01Journal journalSourse, C_HW_modul_03_part_01Journal journalOther)
         {
             return journalSourse.numberOfStaff == journalOther.numberOfStaff;
         }
 
-        public static bool operator <(Journal journalSourse, Journal journalOther)
+        public static bool operator <(C_HW_modul_03_part_01Journal journalSourse, C_HW_modul_03_part_01Journal journalOther)
         {
             return journalSourse.numberOfStaff < journalOther.numberOfStaff;
         }
-        public static bool operator >(Journal journalSourse, Journal journalOther) 
+        public static bool operator >(C_HW_modul_03_part_01Journal journalSourse, C_HW_modul_03_part_01Journal journalOther) 
         {
             return journalSourse.numberOfStaff > journalOther.numberOfStaff;
         }

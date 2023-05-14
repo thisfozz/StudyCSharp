@@ -53,12 +53,13 @@
     <Compile Include="Classwork\Human\Student.cs" />
     <Compile Include="Classwork\Figurs\Triangle.cs" />
     <Compile Include="Classwork\Word\WordCount.cs" />
+    <Compile Include="Homework\C_HW_modul_02.cs" />
     <Compile Include="Homework\Book\Book.cs" />
     <Compile Include="Homework\Book\MenegerBook.cs" />
-    <Compile Include="Homework\Hmw10Apr.cs" />
-    <Compile Include="Homework\Hmw17Aprl.cs" />
+    <Compile Include="Homework\C_HW_modul_01.cs" />
+    <Compile Include="Homework\C_HW_modul_03_part_01.cs" />
     <Compile Include="Homework\Hmw26Aprl.cs" />
-    <Compile Include="Homework\Journal.cs" />
+    <Compile Include="Homework\C_HW_modul_03_part_01Journal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

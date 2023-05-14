@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyCSharp.Homework
 {
-    internal class Hmw26Aprl
+    internal class C_HW_modul_03_part_02
     {
         static string DecimalToBase(int decimalNumber, int baseNumber)
         {

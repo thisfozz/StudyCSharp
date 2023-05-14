@@ -67,7 +67,7 @@ namespace StudyCSharp.Homework.Morse
 
             return morseBuilder.ToString().TrimEnd();
         }
-        public string MorseToText()
+        public string MorseToText(string text)
         {
 
             Dictionary<string, char> morseReversed = new Dictionary<string, char>()
@@ -109,7 +109,7 @@ namespace StudyCSharp.Homework.Morse
 
             StringBuilder morseBuilder = new StringBuilder();
 
-            char[] delimeter = { ' ', '/' };
+            char[] delimeter = { ' ' };
             string[] words = text.Split(delimeter, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string item in words)

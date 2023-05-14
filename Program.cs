@@ -1,5 +1,4 @@
 ﻿using StudyCSharp.Homework;
-using StudyCSharp.Homework.C_HW_modul_06;
 using System;
 using System.Collections.Generic;
 using System.Linq;

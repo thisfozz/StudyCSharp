@@ -27,11 +27,11 @@ namespace StudyCSharp.Homework.C_HW_modul_06
 
         public void PrintDollar()
         {
-            Console.WriteLine("{0}.{1:00}", Dollar, DollarCents);
+            Console.WriteLine($"{Dollar}.{DollarCents}");
         }
         public void PrintEuro()
         {
-            Console.WriteLine("{0}.{1:00}", Euro, EuroCents);
+            Console.WriteLine($"{Euro}.{EuroCents}");
         }
     }
 

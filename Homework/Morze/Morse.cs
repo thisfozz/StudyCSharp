@@ -1,20 +1,21 @@
-﻿using StudyCSharp.Homework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace StudyCSharp
+namespace StudyCSharp.Homework.Morse
 {
-    internal class Program
+    internal class Morse
     {
-        static void Main(string[] args)
+        private string text;
+
+        public Morse(string text)
         {
-            Console.WriteLine(MorzeToText("- . ... -"));
+            this.text = text;
         }
-        static string CoderMorse(string text)
+
+        public string CoderToMorse()
         {
 
             Dictionary<char, string> morseAlphabet = new Dictionary<char, string>()
@@ -66,7 +67,7 @@ namespace StudyCSharp
 
             return morseBuilder.ToString().TrimEnd();
         }
-        static string MorzeToText(string text)
+        public string MorseToText()
         {
 
             Dictionary<string, char> morseReversed = new Dictionary<string, char>()

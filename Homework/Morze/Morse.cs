@@ -116,7 +116,7 @@ namespace StudyCSharp.Homework.Morse
             {
                 if (morseReversed.ContainsKey(item))
                 {
-                    morseBuilder.Append(morseReversed[item] + "");
+                    morseBuilder.Append(morseReversed[item]);
                 }
             }
             return morseBuilder.ToString().TrimEnd();

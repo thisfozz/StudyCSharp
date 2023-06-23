@@ -1,4 +1,5 @@
 ﻿using StudyCSharp.Homework;
+using StudyCSharp.Homework.Morse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace StudyCSharp
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
